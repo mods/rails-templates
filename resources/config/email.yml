@@ -1,0 +1,29 @@
+development:
+  delivery_method: :smtp
+  smtp_settings:
+    address: smpt.host.com
+    port: 25
+    domain: smpt.host.com
+    authentication: :login
+    user_name: smtp@host.com
+    password: xxxxxx
+    
+production:
+  delivery_method: :smtp
+  smtp_settings:
+    address: smpt.host.com
+    port: 25
+    domain: smpt.host.com
+    authentication: :login
+    user_name: smtp@host.com
+    password: xxxxxx
+
+development2:
+  delivery_method: :smtp
+  smtp_settings:
+    address: smpt.host.com
+    port: 25
+    domain: smpt.host.com
+    authentication: :login
+    user_name: smtp@host.com
+    password: xxxxxx

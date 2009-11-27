@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+
+	<title>Grande ora digitale - Esempio JavaScript - Webstyling.it</title>
+	<meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+<LINK HREF="../../files/style2.css" type="text/css" rel="stylesheet">
+
+<script language="JavaScript">
+<!--
+  numImmag = 1
+  // Carica in anticipo le immagini
+  immagini = new Array()
+  for(i = 0; i < 10; i++) 
+  {
+    immagini[i] = new Image()
+    immagini[i].src = i + ".gif"
+  }
+
+  function scriviora()
+  {
+    oggi = new Date()
+    ore = oggi.getHours()
+    if (ore < 10)
+      ore = "0" + ore + "" // con l'aggiunta di "" converte il valore in stringa
+    else
+      ore += ""            // converte il valore in stringa; idem per min e sec
+    min = oggi.getMinutes()
+    if (min < 10)
+      min = "0" + min + ""
+    else
+      min += ""
+    sec = oggi.getSeconds()
+    if (sec < 10)
+      sec = "0" + sec + ""
+    else
+      sec += ""
+    // per selezionare l'immagine del numero da visualizzare, 
+    // rileva dalla stringa la cifra con substr(posizione,lunghezza)
+    document.ora1.src = immagini[ore.substr(0,1)].src
+    document.ora2.src = immagini[ore.substr(1,1)].src
+    document.min1.src = immagini[min.substr(0,1)].src
+    document.min2.src = immagini[min.substr(1,1)].src
+    document.sec1.src = immagini[sec.substr(0,1)].src
+    document.sec2.src = immagini[sec.substr(1,1)].src
+  }
+//-->
+</script>
+
+</head>
+<body >
+<br /><br />
+<div align="center" style="background-color:white;padding:3px">
+
+<center>
+<h3>Ora digitale</h3>
+<p><b>Qui sotto c'è un orologio che segna l'ora digitale in continuazione</b>
+<p><!-- va a vedere l'ora ogni decimo di secondo -->
+<img name="ora1" src="0.gif" onLoad="setTimeout('scriviora()',100)">
+<img name="ora2" src="0.gif">
+<img src="duepunti.gif">
+<img name="min1" src="0.gif">
+<img name="min2" src="0.gif">
+<img src="duepunti.gif">
+<img name="sec1" src="0.gif">
+<img name="sec2" src="0.gif">
+</center>
+
+</div>
+<br /><br /><br />
+<A HREF="912.zip">Scarica lo script con le immagini</A>
+
+<br /><br /><br />
+
+<CENTER><TABLE cellSpacing=0 cellPadding=3 width=85% border=1>
+        <TBODY>
+        <TR>
+          <TD bgColor=#d1d7dc class=genmed align=left><B>Webstyling --> Javascript --> Orologio : Ora Digitale</B> 
+            <BR><BR>Questo script vi permette di inserire nella vostra pagina un semplice orologio digitale numerico.<BR>Cliccate sul bottone di sotto per selezionare tutto il testo e poi copiatelo ed incollatelo nella vostra pagina, seguendo le istruzioni in esso contenute.<BR><BR></TD></TR>
+        <TR>
+          <TD align=middle bgColor=#d1d7dc>
+            <FORM name=copy>
+            <DIV align=center><INPUT onclick=javascript:this.form.txt.focus();this.form.txt.select(); type=button value="Highlight All" class=mainoption>&nbsp;&nbsp;&nbsp;&nbsp; 
+            </DIV><BR>
+			<TEXTAREA name=txt rows=25 wrap=VIRTUAL cols=90>
+&lt;!-- TWO STEPS TO INSTALL DIGITAL CLOCK:
+
+
+
+  1.  Copia tutto il codice nell'HEAD del tuo documento HTML
+
+  2.  Copia il resto del codice dove vuoi che compaia l'ora	
+
+
+&lt;!-- STEP ONE:  --&gt;
+
+&lt;script language="JavaScript">
+<!--
+  numImmag = 1
+  // Carica in anticipo le immagini
+  immagini = new Array()
+  for(i = 0; i < 10; i++) 
+  {
+    immagini[i] = new Image()
+    immagini[i].src = i + ".gif"
+  }
+
+  function scriviora()
+  {
+    oggi = new Date()
+    ore = oggi.getHours()
+    if (ore < 10)
+      ore = "0" + ore + "" // con l'aggiunta di "" converte il valore in stringa
+    else
+      ore += ""            // converte il valore in stringa; idem per min e sec
+    min = oggi.getMinutes()
+    if (min < 10)
+      min = "0" + min + ""
+    else
+      min += ""
+    sec = oggi.getSeconds()
+    if (sec < 10)
+      sec = "0" + sec + ""
+    else
+      sec += ""
+    // per selezionare l'immagine del numero da visualizzare, 
+    // rileva dalla stringa la cifra con substr(posizione,lunghezza)
+    document.ora1.src = immagini[ore.substr(0,1)].src
+    document.ora2.src = immagini[ore.substr(1,1)].src
+    document.min1.src = immagini[min.substr(0,1)].src
+    document.min2.src = immagini[min.substr(1,1)].src
+    document.sec1.src = immagini[sec.substr(0,1)].src
+    document.sec2.src = immagini[sec.substr(1,1)].src
+  }
+//-->
+&lt;/script>
+
+
+&lt;!-- STEP TWO:  --&gt;
+
+&lt;div align="center" style="background-color:white;padding:3px">
+
+&lt;center>
+&lt;h3>Ora digitale&lt;/h3>
+&lt;p>&lt;b>Qui sotto c'è un orologio che segna l'ora digitale in continuazione&lt;/b>
+&lt;p>&lt;!-- va a vedere l'ora ogni decimo di secondo -->
+&lt;img name="ora1" src="0.gif" onLoad="setTimeout('scriviora()',100)">
+&lt;img name="ora2" src="0.gif">
+&lt;img src="duepunti.gif">
+&lt;img name="min1" src="0.gif">
+&lt;img name="min2" src="0.gif">
+&lt;img src="duepunti.gif">
+&lt;img name="sec1" src="0.gif">
+&lt;img name="sec2" src="0.gif">
+&lt;/center>
+
+&lt;/div>
+
+
+
+
+</TEXTAREA>
+</FORM></TD>
+</TR>
+</TABLE></CENTER><BR><BR>
+<BR><BR>
+
+
+<!-- Inizio Codice Shinystat -->
+<script type="text/javascript" language="JavaScript" SRC="http://codice.shinystat.com/cgi-bin/getcod.cgi?USER=webstyling"></script>
+<noscript>
+<A HREF="http://www.shinystat.com" target="_top">
+<IMG SRC="http://www.shinystat.com/cgi-bin/shinystat.cgi?USER=webstyling" ALT="Free web counters" BORDER="0"></A>
+</noscript>
+<!-- Fine Codice Shinystat -->
+
+</body>
+</html>
